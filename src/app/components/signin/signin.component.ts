@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from 'src/app/sevices/auth/auth.service';
+import { AuthService } from 'src/app/services/auth/auth.service';
+
 
 @Component({
   selector: 'app-signin',
@@ -29,7 +30,7 @@ export class SigninComponent implements OnInit {
         if (res != null) {
           this.user = res;
           localStorage.setItem('userId', this.user.id);
-          this.router.navigate(['/ELearning/classes']);
+          this.router.navigate(['/ELearning/courses']);
         } else {
           console.log("not found");
           console.log(res);

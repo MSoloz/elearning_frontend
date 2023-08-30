@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { RewardsComponent } from './components/rewards/rewards.component';
-import { ClassesComponent } from './components/classes/classes.component';
 import { SubjectsComponent } from './components/subjects/subjects.component';
 import { QuestionsComponent } from './components/questions/questions.component';
 import { SigninComponent } from './components/signin/signin.component';
@@ -27,6 +26,11 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
 import { CoursesComponent } from './components/courses/courses.component';
+import { DegreesComponent } from './components/degrees/degrees.component';
+import { TopicsComponent } from './components/topics/topics.component';
+import { CourseDetailsComponent } from './components/course-details/course-details.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -34,12 +38,14 @@ import { CoursesComponent } from './components/courses/courses.component';
     NavbarComponent,
     ProgressComponent,
     RewardsComponent,
-    ClassesComponent,
     SubjectsComponent,
     QuestionsComponent,
     SigninComponent,
     SignupComponent,
-    CoursesComponent
+    CoursesComponent,
+    DegreesComponent,
+    TopicsComponent,
+    CourseDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +65,8 @@ import { CoursesComponent } from './components/courses/courses.component';
     MatListModule,
     MatTableModule,
     MatMenuModule,
+    FlexLayoutModule,
+    NgxPaginationModule
 
   ],
   providers: [],

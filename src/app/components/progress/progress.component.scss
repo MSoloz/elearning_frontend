@@ -1,0 +1,134 @@
+.page-container {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .real-time {
+    margin-top: 30px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    color: black;
+  }
+  .story-image {
+    width: 100%; /* Make sure the image fills the width of the container */
+    max-width: 400px; /* Limit the maximum width of the image */
+    margin: 20px auto; /* Center the image horizontally and provide spacing */
+    display: block;
+  }
+  
+  .diagram {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .bar {
+    width: 100px;
+    height: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: green;
+    border-radius: 10px;
+  }
+  
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 8px;
+    font-size: 12px;
+  }
+  
+  .additional-text {
+    margin-top: 30px;
+    border-top: 1px solid lightgray;
+    padding-top: 20px;
+  }
+  
+  .bottom-section {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .highlight-text {
+    font-size: 24px;
+    color: green;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .signup-button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: darkgreen;
+  }
+  /* Footer Styles */
+.footer {
+    background-color: #333; /* New background color for the footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links li {
+    margin: 0 15px;
+    font-size: 14px;
+  }
+  
+  .footer-links li:first-child {
+    margin-left: 0;
+  }
+  
+  .footer-links li:last-child {
+    margin-right: 0;
+  }

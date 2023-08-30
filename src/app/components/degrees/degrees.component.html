@@ -6,12 +6,12 @@
     </header>
     
     <main>
-        <mat-card *ngFor="let subject of subjects" class="card">
+        <mat-card *ngFor="let degree of degrees" class="card">
             <mat-card-header class="card-header">
-                <p>{{ subject.title }}</p>
+                {{ degree.title }}
             </mat-card-header>
             <mat-card-content class="card-body">
-                <p>{{ subject.sub_title }}</p>
+                <p>{{ degree.sub_title }}</p>
                 <button mat-button class="card-button" (click)="navigate()">Learn More</button>
             </mat-card-content>
         </mat-card>

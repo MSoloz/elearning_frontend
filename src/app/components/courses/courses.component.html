@@ -1,1 +1,24 @@
-<p>courses works!</p>
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" *ngFor="let course of courses | paginate: { id: 'listing_pagination', itemsPerPage: 12, currentPage: page }">
+      <mat-card class="mat-elevation-z4">
+        <mat-card-header>
+          <mat-card-title>{{ course.name }}</mat-card-title>
+        </mat-card-header>
+        <!-- Modify the image URL here -->
+        <img class="example-image" mat-card-image [src]="'http://localhost:8000' + course.image_path" alt="Course Image">
+        <mat-card-content>
+          
+{{course.description}}          
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button (click)="navigate(course.id)">Show</a>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  <div class="pagination_container">
+    <pagination-controls id="listing_pagination" (pageChange)="page = $event"></pagination-controls>
+  </div>
+</div>
+<router-outlet></router-outlet>

@@ -1,1 +1,19 @@
-<p>questions works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Quiz</title>
+</head>
+<body>
+  <div class="quiz-container">
+    <div *ngIf="loading" class="progress-bar">Loading...</div>
+    <div *ngIf="!loading">
+      <div class="question">{{ questionData.question }}</div>
+      <h1>{{ questionData.choices}}</h1>
+      <input #responseField type="text" class="response-field" [value]="response" placeholder="Your Answer">
+      <button class="submit-button" (click)="submitAnswer()">Submit</button>
+    </div>
+  </div>
+</body>
+</html>

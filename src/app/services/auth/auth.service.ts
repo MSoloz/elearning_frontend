@@ -9,9 +9,7 @@ export class AuthService {
 
   private apiServerUrl = "http://localhost:8000/api";
 
-
   constructor(private http: HttpClient) { }
-
 
   
   login(data: any):Observable<any>{
@@ -19,5 +17,4 @@ export class AuthService {
     return this.http.post(`${this.apiServerUrl}/login/`,data);
 
   }
-
 }
