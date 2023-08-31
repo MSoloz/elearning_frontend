@@ -8,6 +8,39 @@ body {
     align-items: center;
     min-height: 100vh;
   }
+  .choices {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  
+    .choice {
+      margin-bottom: 10px;
+
+      input[type="radio"] {
+        margin-right: 5px;
+
+      }
+  
+      label {
+        cursor: pointer;
+
+      }
+    }
+  }
+  
+  .submit-button {
+    margin-top: 20px;
+  }
+  .correct {
+    background-color: green;
+    color: white;
+  }
+  
+  .incorrect {
+    background-color: red;
+    color: white;
+  }
+  
   
   .quiz-container {
     background-color: #fff;

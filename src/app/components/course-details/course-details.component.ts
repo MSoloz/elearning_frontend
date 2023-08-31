@@ -1,37 +1,39 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Course } from 'src/app/models/course';
+import { ActivatedRoute } from '@angular/router';
 import { CourseService } from 'src/app/services/course/course.service';
+import { VgApiService } from '@videogular/ngx-videogular/core';
 
 @Component({
   selector: 'app-course-details',
   templateUrl: './course-details.component.html',
   styleUrls: ['./course-details.component.scss']
 })
-export class CourseDetailsComponent implements OnInit{
+export class CourseDetailsComponent implements OnInit {
 
-  courseId:any;
+  courseId: any;
+  course: any;
+  videoUrl = "http://localhost:8000/media/videos/light__blackness_logo_reveal.mp4";
+  api?: VgApiService; // Declare as possibly undefined
 
-  course: any ; 
+  constructor(private route: ActivatedRoute, private service: CourseService, private vgApi: VgApiService) { }
 
-  videoUrl="http://localhost:8000/media/videos/Snapinsta.app_video_53921017_154718780619968_8753101696699856532_n_deuS9WD.mp4"
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(params => {
+      this.courseId = params.get('id');
+    });
 
-  constructor(private router:Router,private route:ActivatedRoute,private service:CourseService) { }
-
-  ngOnInit(): void { 
-
-    this.route.paramMap.subscribe(params => {  this.courseId = params.get('id'); });
- 
-  
-      this.service.getCourseById(this.courseId)
+    this.service.getCourseById(this.courseId)
       .subscribe({
         next: (result) => {
-          this.course= result;
-          
+          this.course = result;
         }
       });
-    
-
   }
+
+  onPlayerReady(api: VgApiService) {
+    this.api = api;
+  }
+
+
 
 }

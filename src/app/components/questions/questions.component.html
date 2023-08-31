@@ -11,9 +11,16 @@
     <div *ngIf="!loading">
       <div class="question">{{ questionData.question }}</div>
       <h1>{{ questionData.choices}}</h1>
-      <input #responseField type="text" class="response-field" [value]="response" placeholder="Your Answer">
+      <input #responseField type="text" class="response-field" [(ngModel)]="response" placeholder="Your Answer">
       <button class="submit-button" (click)="submitAnswer()">Submit</button>
     </div>
+    <div *ngIf="showProgress" class="progress-container">
+      <p>Progress: {{ progress }} / {{ totalQuestions }}</p>
+    </div>
+    <div class="result-message" [class.correct]="resultMessage === 'Congratulations, your answer is correct!'" [class.incorrect]="resultMessage === 'Oops, your answer is incorrect. Try again!'">
+      {{ resultMessage }}
+    </div>
+    
   </div>
 </body>
 </html>

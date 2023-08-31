@@ -31,6 +31,12 @@ import { TopicsComponent } from './components/topics/topics.component';
 import { CourseDetailsComponent } from './components/course-details/course-details.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { VgCoreModule } from '@videogular/ngx-videogular/core';
+import { VgControlsModule } from '@videogular/ngx-videogular/controls';
+import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
+import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
+
+
 
 @NgModule({
   declarations: [
@@ -66,7 +72,12 @@ import { NgxPaginationModule } from 'ngx-pagination';
     MatTableModule,
     MatMenuModule,
     FlexLayoutModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule,
+    
 
   ],
   providers: [],

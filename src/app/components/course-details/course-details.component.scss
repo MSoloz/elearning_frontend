@@ -16,4 +16,8 @@
     height: auto; /* Maintain aspect ratio */
     max-height: 80vh; /* Limit the video height to 80% of the viewport height */
   }
+  .video-container {
+    max-width: 500px; /* Set the maximum width for the video player */
+    margin: 0 auto; /* Center the video player horizontally */
+  }
   
